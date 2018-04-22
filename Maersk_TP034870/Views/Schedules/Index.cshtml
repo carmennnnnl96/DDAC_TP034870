@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Maersk_TP034870.Models.Schedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.deptdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deptfrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrivaldate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vessel)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.deptdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deptfrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrivaldate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vessel)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

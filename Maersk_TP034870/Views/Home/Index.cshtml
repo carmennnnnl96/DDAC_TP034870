@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Maersk Line</h1>
+    <p class="lead">Maersk is a container management company.</p>
+    <p><a  class="btn btn-primary btn-lg" @Html.ActionLink("Learn More", "About", "Home")
+          </a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+           Maersk offers a full transhipping service.
+        <p><a class="btn btn-default" @Html.ActionLink("Learn More", "About", "Home")</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Make a Schedule</h2>
+        <p>Manage your schedule here.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Learn More", "Index", "Schedules")</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Book Vessels here</h2>
+        <p>Manage your Vessel bookings here.</p>
+        <p><a class="btn btn-default"  @Html.ActionLink("Learn More", "Index", "Vessels")
+                
+              </a></p>
+    </div >
+</div>
